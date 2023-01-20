@@ -1,0 +1,37 @@
+public class Bigbike
+{
+	private String color;
+	private Engine engine;
+	private Killswitch killswitch;
+	
+	public Bigbike(String color){
+		this.color = color;
+		engine = new Engine();
+		killswitch = new Killswitch();
+	}
+	public void setColor(String color){
+		this.color = color;
+	}
+	public String start(){
+		return engine.startEngine();
+	}
+}
+public class Engine
+{ 
+	public String startEngine(){
+		return "The Engine has started.";
+	}
+	public String stopEngine(){
+		return "The Engine has stopped";
+	}
+}
+public class Killswitch
+{
+}
+public class Main
+{
+	public static void main(String[] arg){
+		Bigbike Kawasaki = new Bigbike("Green");
+		System.out.println(Kawasaki.start());
+	}
+}
